@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.bottomnav.houses.HousesFragment">
+
+    <GridLayout
+        android:id="@+id/gridLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+
+        android:layout_marginVertical="100dp"
+        android:columnCount="2"
+        android:rowCount="2">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/button_gryffindor"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            android:layout_margin="5dp"
+            android:backgroundTint="@color/gryffindor_red"
+            android:text="@string/gryffindor_house_text"
+            android:textColor="@color/gryffindor_yellow"
+            android:textSize="20sp"
+            app:cornerRadius="10dp"
+            app:icon="@drawable/lion_icon"
+            app:iconGravity="textTop"
+            app:iconSize="100dp"
+            app:iconTint="@color/white" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/button_slytherin"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            android:layout_margin="5dp"
+            android:backgroundTint="@color/slytherin_green"
+            android:text="@string/slytherin_house_text"
+            android:textColor="@color/slytherin_light_silver"
+            android:textSize="20sp"
+            app:cornerRadius="10dp"
+            app:icon="@drawable/snake_icon"
+            app:iconGravity="textTop"
+            app:iconSize="100dp"
+            app:iconTint="@color/white" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/button_hufflepuff"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            android:layout_margin="5dp"
+            android:backgroundTint="@color/hufflepuff_canary"
+            android:text="@string/hufflepuff_house_text"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            app:cornerRadius="10dp"
+            app:icon="@drawable/badger_icon"
+            app:iconGravity="textTop"
+            app:iconSize="100dp"
+            app:iconTint="@color/white" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/button_ravenclaw"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            android:layout_margin="5dp"
+            android:backgroundTint="@color/ravenclaw_dark_blue"
+            android:text="@string/ravenclaw_house_text"
+            android:textColor="@color/ravenclaw_gray"
+            android:textSize="20sp"
+            app:cornerRadius="10dp"
+            app:icon="@drawable/raven_icon"
+            app:iconGravity="textTop"
+            app:iconSize="100dp"
+            app:iconTint="@color/white" />
+
+
+    </GridLayout>
+
+</FrameLayout>
