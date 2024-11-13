@@ -9,10 +9,12 @@ import androidx.lifecycle.lifecycleScope
 import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.botirovka.harrypotterapp.R
 import com.botirovka.harrypotterapp.data.database.HarryPotterDatabase
 import com.botirovka.harrypotterapp.data.models.CharacterModel
 import com.botirovka.harrypotterapp.data.repository.HarryPotterRepository
 import com.botirovka.harrypotterapp.databinding.FragmentCharactersBinding
+import com.botirovka.harrypotterapp.ui.character.CharacterDetailsFragment
 import kotlinx.coroutines.launch
 
 
@@ -62,7 +64,11 @@ class CharactersFragment : Fragment() {
 
 }
     private fun showCharacterDetails(character: CharacterModel) {
-
+        val detailsFragment = CharacterDetailsFragment.newInstance(character)
+        requireActivity().supportFragmentManager.beginTransaction()
+            .replace(R.id.fragment_container, detailsFragment)
+            .addToBackStack(null)
+            .commit()
     }
 
     companion object {

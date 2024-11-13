@@ -8,4 +8,21 @@
     <string name="ravenclaw_house_text">Ravenclaw</string>
     <string name="not_a_student_text">Not a student</string>
     <string name="spell_apparate_text">A non-verbal transportation spell that allows a witch or wizard to instantly travel on the spot and appear at another location (disparate is the opposite)</string>
+    <string name="has_no_house_text">Has no house</string>
+    <string name="learned_spells">Learned spells:</string>
+    <string name="actor">Actor:</string>
+    <string name="name">Name:</string>
+    <string name="house">House:</string>
+    <string name="change_house">Change house</string>
+    <string name="teach_new_spell">Teach new spell</string>
+    <string name="for_text">For:</string>
+    <string name="current_house">Current House:</string>
+    <string name="click_to_select_the_new_house_text">Click to select the new house</string>
+    <string name="cancel_text">Cancel</string>
+    <string name="back_text">Back</string>
+    <string name="learn_a_new_spell">Learn a new spell</string>
+    <string name="add_spell_to_list_for_learn">Add spell to list for learn</string>
+    <string name="random_spell_button">Random Spell Button</string>
+    <string name="learn_text">Learn</string>
+    <string name="you_already_added_all_spells">You already added all spells</string>
 </resources>
