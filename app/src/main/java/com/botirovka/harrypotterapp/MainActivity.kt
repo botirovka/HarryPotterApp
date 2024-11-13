@@ -16,6 +16,7 @@ import com.botirovka.harrypotterapp.data.repository.HarryPotterRepository
 import com.botirovka.harrypotterapp.databinding.ActivityMainBinding
 import com.botirovka.harrypotterapp.ui.bottomnav.characters.CharactersFragment
 import com.botirovka.harrypotterapp.ui.bottomnav.houses.HousesFragment
+import com.botirovka.harrypotterapp.ui.bottomnav.spells.SpellsFragment
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import kotlinx.coroutines.launch
 
@@ -54,7 +55,7 @@ class MainActivity : AppCompatActivity() {
             when (item.itemId) {
                 R.id.houses -> replaceFragment(HousesFragment())
                 R.id.characters -> replaceFragment(CharactersFragment())
-                R.id.spells -> replaceFragment(HousesFragment())
+                R.id.spells -> replaceFragment(SpellsFragment())
                 else -> false
             }
         }

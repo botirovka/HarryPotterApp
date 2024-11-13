@@ -20,6 +20,9 @@ interface CharacterDao{
     @Query("SELECT * FROM characters")
     suspend fun getAllCharacters(): List<CharacterModel>
 
+    @Query("SELECT * FROM characters WHERE house = :house")
+    suspend fun getAllCharacters(house: String): List<CharacterModel>
+
     @Query("SELECT * FROM characters WHERE id = :characterId")
     suspend fun getCharacterById(characterId: String): CharacterModel
 }

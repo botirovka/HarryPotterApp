@@ -2,7 +2,6 @@ package com.botirovka.harrypotterapp.data.repository
 
 import com.botirovka.harrypotterapp.data.api.HarryPotterApiClient
 import com.botirovka.harrypotterapp.data.database.HarryPotterDatabase
-import com.botirovka.harrypotterapp.data.datastore.DataStoreManager
 import com.botirovka.harrypotterapp.data.models.CharacterModel
 import com.botirovka.harrypotterapp.data.models.SpellModel
 
@@ -22,6 +21,9 @@ class HarryPotterRepository(
 
     suspend fun getAllCharacters(): List<CharacterModel> {
         return database.characterDao().getAllCharacters()
+    }
+    suspend fun getAllCharacters(house: String): List<CharacterModel>{
+        return database.characterDao().getAllCharacters(house)
     }
 
     suspend fun getAllSpells(): List<SpellModel> {

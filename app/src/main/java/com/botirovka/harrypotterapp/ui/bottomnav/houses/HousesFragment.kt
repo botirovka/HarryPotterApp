@@ -5,8 +5,10 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+
 import com.botirovka.harrypotterapp.R
 import com.botirovka.harrypotterapp.databinding.FragmentHousesBinding
+import com.botirovka.harrypotterapp.ui.bottomnav.characters.CharactersFragment
 
 
 class HousesFragment : Fragment() {
@@ -18,16 +20,31 @@ class HousesFragment : Fragment() {
     ): View? {
         binding = FragmentHousesBinding.inflate(inflater, container, false)
 
-        binding.buttonGryffindor
+        binding.buttonGryffindor.setOnClickListener {
+            openCharacterFragment("Gryffindor")
+        }
 
-        binding.buttonSlytherin
+        binding.buttonSlytherin.setOnClickListener {
+            openCharacterFragment("Slytherin")
+        }
 
-        binding.buttonHufflepuff
+        binding.buttonHufflepuff.setOnClickListener {
+            openCharacterFragment("Hufflepuff")
+        }
 
-        binding.buttonRavenclaw
+        binding.buttonRavenclaw.setOnClickListener {
+            openCharacterFragment("Ravenclaw")
+        }
 
         return binding.root
     }
 
+    private fun openCharacterFragment(house: String) {
+        val fragment = CharactersFragment.newInstance(house)
+        requireActivity().supportFragmentManager.beginTransaction()
+            .replace(R.id.fragment_container, fragment)
+            .addToBackStack(null)
+            .commit()
+    }
 
 }
