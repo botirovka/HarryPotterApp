@@ -75,7 +75,7 @@ class CharacterAdapter (
             }
             else -> {
                 holder.houseImageView.setImageResource(R.drawable.cross_icon)
-                holder.houseTextView.setText(holder.itemView.context.getString(R.string.not_a_student_text))
+                holder.houseTextView.setText(holder.itemView.context.getString(R.string.has_no_house_text))
                 holder.characterLayout.setBackgroundColor(
                     ContextCompat.getColor(holder.itemView.context, R.color.slytherin_dark_silver)
                 )

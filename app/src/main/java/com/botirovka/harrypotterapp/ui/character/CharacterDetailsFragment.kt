@@ -48,10 +48,11 @@ class CharacterDetailsFragment : Fragment() {
             binding.characterNameTv.text = character.name
             binding.characterActorNameTv.text = character.actor
             binding.characterHouseTv.text = character.house
-
-            Glide.with(requireContext())
-                .load(character.image)
-                .into(binding.characterItemProfileIv)
+            if(character.image.isNotEmpty()) {
+                Glide.with(requireContext())
+                    .load(character.image)
+                    .into(binding.characterItemProfileIv)
+            }
 
         }
 
